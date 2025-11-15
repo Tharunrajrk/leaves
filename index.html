@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaves - Your One-Stop Shop</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="modal-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <!-- Top Info Bar -->
+    <div class="top-bar">
+        <div class="top-bar-content">
+            <span class="top-bar-item"><i class="fas fa-shipping-fast"></i> Free Shipping on Orders Over ₹3,750</span>
+            <span class="top-bar-item"><i class="fas fa-headset"></i> 24/7 Customer Support</span>
+            <span class="top-bar-item"><i class="fas fa-redo"></i> Easy Returns</span>
+        </div>
+    </div>
+
+    <!-- Sidebar Navigation -->
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h3>All</h3>
+            <button class="sidebar-close" id="sidebarClose"><i class="fas fa-times"></i></button>
+        </div>
+        <nav class="sidebar-nav">
+            <ul>
+                <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#categories"><i class="fas fa-th"></i> Categories</a></li>
+                <li><a href="#" id="featuredLink"><i class="fas fa-star"></i> Featured Products</a></li>
+                <li><a href="#products"><i class="fas fa-box"></i> Products</a></li>
+                <li><a href="#deals"><i class="fas fa-tag"></i> Deals</a></li>
+                <li><a href="#cart" id="cartTab"><i class="fas fa-shopping-cart"></i> My Cart</a></li>
+                <li><a href="#orders"><i class="fas fa-receipt"></i> Orders</a></li>
+                <li><a href="login.html"><i class="fas fa-user"></i> My Account</a></li>
+            </ul>
+        </nav>
+        <div class="sidebar-footer">
+            <p>Newsletter</p>
+            <input type="email" placeholder="Your email" class="sidebar-email">
+            <button class="sidebar-subscribe">Subscribe</button>
+        </div>
+    </div>
+
+    <!-- Sidebar Overlay -->
+    <div class="sidebar-overlay" id="overlay"></div>
+
+    <!-- Sidebar Toggle -->
+    <button class="sidebar-toggle" id="sidebarToggle">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <header>
+        <div class="container">
+            <button class="hamburger-menu" id="hamburgerMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <a href="index.html" class="logo-container">
+                <img src="1000113751.jpg" alt="Leaves Logo" class="logo-img">
+                <span class="logo-text">Leaves</span>
+            </a>
+
+            <div class="header-icons">
+                <button id="searchBtn" class="search-btn" title="Search Products">
+                    <i class="fas fa-search"></i>
+                </button>
+
+                <a href="#" class="cart-link" id="cartLink">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span id="cart-count">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Search Modal -->
+    <div id="searchModal" class="search-modal">
+        <div class="search-modal-content">
+            <button class="search-close" id="searchClose">&times;</button>
+            <div class="search-container">
+                <input type="text" id="searchInput" class="search-input" placeholder="Search products (name or category)...">
+                <button id="searchSubmit" class="search-submit">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+            <div id="searchResults" class="search-results">
+                <!-- Results will be populated here -->
+            </div>
+        </div>
+    </div>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <h2 class="fade-in">Welcome to Leaves</h2>
+            <p class="fade-in" style="animation-delay: 0.5s;">Find everything you need, all in one place.</p>
+            <a href="#products" class="btn fade-in" style="animation-delay: 1s;">Shop Now</a>
+        </div>
+    </section>
+
+    <!-- Special Offer Banner -->
+    <div class="offer-banner">
+        <div class="offer-content">
+            <div class="offer-badge">🎁 NEW CUSTOMER</div>
+            <h2 class="offer-title">90% OFFER</h2>
+            <p class="offer-subtitle">On Your First Purchase</p>
+            <p class="offer-description">Limited time offer - Use code: NEWLEAVES 001</p>
+            <button class="offer-cta">Shop Now & Save</button>
+        </div>
+        <div class="offer-decoration">
+            <div class="leaf leaf-1"></div>
+            <div class="leaf leaf-2"></div>
+            <div class="leaf leaf-3"></div>
+            <div class="leaf leaf-4"></div>
+        </div>
+    </div>
+
+    <section id="categories" class="container">
+        <h2>Shop by Category</h2>
+        <div class="category-grid">
+            <a href="#" class="category-card">
+                <img src="https://picsum.photos/id/119/200/200" alt="Furniture">
+                <h3>Furniture</h3>
+            </a>
+            <a href="#" class="category-card">
+                <img src="https://picsum.photos/id/0/200/200" alt="Electronics">
+                <h3>Electronics</h3>
+            </a>
+            <a href="#" class="category-card">
+                <img src="https://picsum.photos/id/1060/200/200" alt="Dresses">
+                <h3>Dresses</h3>
+            </a>
+            <a href="#" class="category-card">
+                <img src="https://picsum.photos/id/180/200/200" alt="Laptops">
+                <h3>Laptops</h3>
+            </a>
+            <a href="#" class="category-card">
+                <img src="https://picsum.photos/id/106/200/200" alt="Plants">
+                <h3>Plants</h3>
+            </a>
+            <a href="#" class="category-card">
+                <img src="https://picsum.photos/id/24/200/200" alt="Seeds">
+                <h3>Seeds</h3>
+            </a>
+            <a href="#" class="category-card">
+                <img src="https://picsum.photos/id/1074/200/200" alt="Shoes">
+                <h3>Shoes</h3>
+            </a>
+            <a href="#" class="category-card">
+                <img src="https://picsum.photos/id/21/200/200" alt="Kitchen">
+                <h3>Kitchen</h3>
+            </a>
+            <a href="#" class="category-card">
+                <img src="https://picsum.photos/id/175/200/200" alt="Books">
+                <h3>Books</h3>
+            </a>
+            <a href="#" class="category-card">
+                <img src="https://picsum.photos/id/30/200/200" alt="Mobiles">
+                <h3>Mobiles</h3>
+            </a>
+            <a href="#" class="category-card">
+                <img src="https://picsum.photos/id/1025/200/200" alt="Pets">
+                <h3>Pet Supplies</h3>
+            </a>
+            <a href="#" class="category-card">
+                <img src="https://picsum.photos/id/102/200/200" alt="Toys">
+                <h3>Toys & Games</h3>
+            </a>
+        </div>
+    </section>
+
+    <section id="products" class="container">
+        <h2>Featured Products</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="https://picsum.photos/id/23/300/300" alt="Product Image">
+                <h3>Modern Laptop</h3>
+                <p class="price">₹74,925</p>
+                <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+            
+            <div class="product-card">
+                <img src="https://picsum.photos/id/250/300/300" alt="Product Image">
+                <h3>Cozy Sofa</h3>
+                <p class="price">₹33,750</p>
+                <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+            
+            <div class="product-card">
+                <img src="https://picsum.photos/id/1080/300/300" alt="Product Image">
+                <h3>Stylish Dress</h3>
+                <p class="price">₹3,749</p>
+                <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+            
+            <div class="product-card">
+                <img src="https://picsum.photos/id/25/300/300" alt="Product Image">
+                <h3>House Plant</h3>
+                <p class="price">₹1,499</p>
+                <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+
+            <div class="product-card">
+                <div class="crt-wrapper">
+                    <img class="crt-image" src="https://picsum.photos/id/1011/300/300" alt="Bluetooth Speaker">
+                </div>
+                <h3>Bluetooth Speaker</h3>
+                <p class="price">₹6,749</p>
+                <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+
+            <div class="product-card">
+                <div class="crt-wrapper">
+                    <img class="crt-image" src="https://picsum.photos/id/29/300/300" alt="Retro TV">
+                </div>
+                <h3>Retro TV</h3>
+                <p class="price">₹9,675</p>
+                <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+
+            <div class="product-card">
+                <div class="crt-wrapper">
+                    <img class="crt-image" src="https://picsum.photos/id/1027/300/300" alt="Vintage Radio">
+                </div>
+                <h3>Vintage Radio</h3>
+                <p class="price">$79.99</p>
+                <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+
+            <div class="product-card">
+                <div class="crt-wrapper">
+                    <img class="crt-image" src="https://picsum.photos/id/1050/300/300" alt="Gaming Console">
+                </div>
+                <h3>Gaming Console</h3>
+                <p class="price">₹26,175</p>
+                <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+
+            <div class="product-card">
+                <div class="crt-wrapper">
+                    <img class="crt-image" src="https://picsum.photos/id/1062/300/300" alt="Monitor">
+                </div>
+                <h3>Studio Monitor</h3>
+                <p class="price">$219.00</p>
+                <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+
+            <div class="product-card">
+                <div class="crt-wrapper">
+                    <img class="crt-image" src="https://picsum.photos/id/1015/300/300" alt="Headphones">
+                </div>
+                <h3>Headphones</h3>
+                <p class="price">$89.00</p>
+                <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+
+            <div class="product-card">
+                <div class="crt-wrapper">
+                    <img class="crt-image" src="https://picsum.photos/id/1039/300/300" alt="Camera">
+                </div>
+                <h3>Compact Camera</h3>
+                <p class="price">$349.00</p>
+                <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+
+            <div class="product-card">
+                <div class="crt-wrapper">
+                    <img class="crt-image" src="https://picsum.photos/id/1043/300/300" alt="Desk Lamp">
+                </div>
+                <h3>Desk Lamp</h3>
+                <p class="price">$24.99</p>
+                <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+
+            <div class="product-card">
+                <div class="crt-wrapper">
+                    <img class="crt-image" src="https://picsum.photos/id/1055/300/300" alt="Smartwatch">
+                </div>
+                <h3>Smartwatch</h3>
+                <p class="price">$149.00</p>
+                <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+
+            <div class="product-card">
+                <div class="crt-wrapper">
+                    <img class="crt-image" src="https://picsum.photos/id/1069/300/300" alt="Electric Kettle">
+                </div>
+                <h3>Electric Kettle</h3>
+                <p class="price">$34.99</p>
+                <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+
+            <div class="product-card">
+                <div class="crt-wrapper">
+                    <img class="crt-image" src="https://picsum.photos/id/1071/300/300" alt="Bluetooth Earbuds">
+                </div>
+                <h3>Bluetooth Earbuds</h3>
+                <p class="price">$69.00</p>
+                <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+
+            <div class="product-card">
+                <div class="crt-wrapper">
+                    <img class="crt-image" src="https://picsum.photos/id/1084/300/300" alt="Action Camera">
+                </div>
+                <h3>Action Camera</h3>
+                <p class="price">$199.00</p>
+                <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+
+            <div class="product-card">
+                <div class="crt-wrapper">
+                    <img class="crt-image" src="https://picsum.photos/id/1081/300/300" alt="Designer Chair">
+                </div>
+                <h3>Designer Chair</h3>
+                <p class="price">$189.00</p>
+                <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+
+            <div class="product-card">
+                <div class="crt-wrapper">
+                    <img class="crt-image" src="https://picsum.photos/id/1019/300/300" alt="Wireless Mouse">
+                </div>
+                <h3>Wireless Mouse</h3>
+                <p class="price">$29.99</p>
+                <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+
+            <div class="product-card">
+                <div class="crt-wrapper">
+                    <img class="crt-image" src="https://picsum.photos/id/1003/300/300" alt="Mechanical Keyboard">
+                </div>
+                <h3>Mechanical Keyboard</h3>
+                <p class="price">₹11,249</p>
+                <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+
+            <div class="product-card">
+                <div class="crt-wrapper">
+                    <img class="crt-image" src="https://picsum.photos/id/1001/300/300" alt="Smart Bulb">
+                </div>
+                <h3>Smart Bulb (3-pack)</h3>
+                <p class="price">$27.99</p>
+                <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+
+            <div class="product-card">
+                <div class="crt-wrapper">
+                    <img class="crt-image" src="https://picsum.photos/id/1035/300/300" alt="Portable Charger">
+                </div>
+                <h3>Portable Charger</h3>
+                <p class="price">$39.99</p>
+                <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+
+            <div class="product-card">
+                <div class="crt-wrapper">
+                    <img class="crt-image" src="https://picsum.photos/id/1047/300/300" alt="Coffee Maker">
+                </div>
+                <h3>Coffee Maker</h3>
+                <p class="price">$79.00</p>
+                <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Modal -->
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Shopping Cart</h2>
+                <button class="modal-close" id="cartClose">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div id="cartItems" class="cart-items-list">
+                    <p class="empty-cart">Your cart is empty</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="cart-summary">
+                    <div class="summary-row">
+                        <span>Subtotal:</span>
+                        <span id="subtotal">₹0.00</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Tax (10%):</span>
+                        <span id="tax">₹0.00</span>
+                    </div>
+                    <div class="summary-row total">
+                        <span>Total:</span>
+                        <span id="total">₹0.00</span>
+                    </div>
+                </div>
+                <div class="modal-buttons">
+                    <button id="continueShoppingBtn" class="btn btn-secondary">Continue Shopping</button>
+                    <button id="placeOrderBtn" class="btn btn-primary" disabled>Place Order</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Orders Modal -->
+    <div id="ordersModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Order History</h2>
+                <button class="modal-close" id="ordersClose">&times;</button>
+            </div>
+            <div class="modal-body">
+                <!-- Orders Tabs -->
+                <div class="orders-tabs-modal">
+                    <button class="orders-tab-btn active" data-tab="all-orders">All Orders</button>
+                    <button class="orders-tab-btn" data-tab="pending-orders">Pending</button>
+                    <button class="orders-tab-btn" data-tab="delivered-orders">Delivered</button>
+                    <button class="orders-tab-btn" data-tab="cancelled-orders">Cancelled</button>
+                </div>
+
+                <div id="all-orders" class="orders-tab-content active">
+                    <div class="orders-list" id="allOrdersList">
+                        <p class="no-data">No orders yet</p>
+                    </div>
+                </div>
+
+                <div id="pending-orders" class="orders-tab-content">
+                    <div class="orders-list" id="pendingOrdersList">
+                        <p class="no-data">No pending orders</p>
+                    </div>
+                </div>
+
+                <div id="delivered-orders" class="orders-tab-content">
+                    <div class="orders-list" id="deliveredOrdersList">
+                        <p class="no-data">No delivered orders</p>
+                    </div>
+                </div>
+
+                <div id="cancelled-orders" class="orders-tab-content">
+                    <div class="orders-list" id="cancelledOrdersList">
+                        <p class="no-data">No cancelled orders</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Featured Products Modal -->
+    <div id="featuredModal" class="modal">
+        <div class="modal-content featured-modal-content">
+            <div class="modal-header">
+                <h2>Featured Products</h2>
+                <button class="modal-close" id="featuredClose">&times;</button>
+            </div>
+            <div class="modal-body featured-modal-body">
+                <!-- Featured Tabs -->
+                <div class="featured-tabs">
+                    <button class="featured-tab-btn active" data-tab="electronics">Electronics</button>
+                    <button class="featured-tab-btn" data-tab="furniture">Furniture</button>
+                    <button class="featured-tab-btn" data-tab="fashion">Fashion</button>
+                    <button class="featured-tab-btn" data-tab="home-garden">Home & Garden</button>
+                </div>
+
+                <!-- Electronics Tab -->
+                <div id="electronics" class="featured-tab-content active">
+                    <div class="featured-products-grid">
+                        <div class="product-card">
+                            <img src="https://picsum.photos/id/23/300/300" alt="Laptop">
+                            <h3>Modern Laptop</h3>
+                            <p class="price">₹74,925</p>
+                            <button class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                        <div class="product-card">
+                            <div class="crt-wrapper">
+                                <img class="crt-image" src="https://picsum.photos/id/1011/300/300" alt="Bluetooth Speaker">
+                            </div>
+                            <h3>Bluetooth Speaker</h3>
+                            <p class="price">₹6,749</p>
+                            <button class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                        <div class="product-card">
+                            <div class="crt-wrapper">
+                                <img class="crt-image" src="https://picsum.photos/id/29/300/300" alt="Retro TV">
+                            </div>
+                            <h3>Retro TV</h3>
+                            <p class="price">₹9,675</p>
+                            <button class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                        <div class="product-card">
+                            <div class="crt-wrapper">
+                                <img class="crt-image" src="https://picsum.photos/id/1015/300/300" alt="Headphones">
+                            </div>
+                            <h3>Headphones</h3>
+                            <p class="price">₹6,675</p>
+                            <button class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Furniture Tab -->
+                <div id="furniture" class="featured-tab-content">
+                    <div class="featured-products-grid">
+                        <div class="product-card">
+                            <img src="https://picsum.photos/id/250/300/300" alt="Cozy Sofa">
+                            <h3>Cozy Sofa</h3>
+                            <p class="price">₹33,750</p>
+                            <button class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                        <div class="product-card">
+                            <div class="crt-wrapper">
+                                <img class="crt-image" src="https://picsum.photos/id/1050/300/300" alt="Office Chair">
+                            </div>
+                            <h3>Office Chair</h3>
+                            <p class="price">₹12,375</p>
+                            <button class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                        <div class="product-card">
+                            <img src="https://picsum.photos/id/119/300/300" alt="Bookshelf">
+                            <h3>Modern Bookshelf</h3>
+                            <p class="price">₹8,925</p>
+                            <button class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                        <div class="product-card">
+                            <div class="crt-wrapper">
+                                <img class="crt-image" src="https://picsum.photos/id/1043/300/300" alt="Desk Lamp">
+                            </div>
+                            <h3>Desk Lamp</h3>
+                            <p class="price">₹2,249</p>
+                            <button class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fashion Tab -->
+                <div id="fashion" class="featured-tab-content">
+                    <div class="featured-products-grid">
+                        <div class="product-card">
+                            <img src="https://picsum.photos/id/1080/300/300" alt="Stylish Dress">
+                            <h3>Stylish Dress</h3>
+                            <p class="price">₹3,749</p>
+                            <button class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                        <div class="product-card">
+                            <img src="https://picsum.photos/id/1074/300/300" alt="Classic Shoes">
+                            <h3>Classic Shoes</h3>
+                            <p class="price">₹4,499</p>
+                            <button class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                        <div class="product-card">
+                            <img src="https://picsum.photos/id/1078/300/300" alt="Casual T-Shirt">
+                            <h3>Casual T-Shirt</h3>
+                            <p class="price">₹1,125</p>
+                            <button class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                        <div class="product-card">
+                            <img src="https://picsum.photos/id/1076/300/300" alt="Jeans">
+                            <h3>Premium Jeans</h3>
+                            <p class="price">₹2,625</p>
+                            <button class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Home & Garden Tab -->
+                <div id="home-garden" class="featured-tab-content">
+                    <div class="featured-products-grid">
+                        <div class="product-card">
+                            <img src="https://picsum.photos/id/25/300/300" alt="House Plant">
+                            <h3>House Plant</h3>
+                            <p class="price">₹1,499</p>
+                            <button class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                        <div class="product-card">
+                            <img src="https://picsum.photos/id/106/300/300" alt="Garden Seeds">
+                            <h3>Garden Seeds Pack</h3>
+                            <p class="price">₹749</p>
+                            <button class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                        <div class="product-card">
+                            <img src="https://picsum.photos/id/21/300/300" alt="Kitchen Set">
+                            <h3>Premium Kitchen Set</h3>
+                            <p class="price">₹5,999</p>
+                            <button class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                        <div class="product-card">
+                            <img src="https://picsum.photos/id/24/300/300" alt="Outdoor Pillows">
+                            <h3>Outdoor Pillows Set</h3>
+                            <p class="price">₹3,375</p>
+                            <button class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Reviews & Comments Section -->
+    <section id="reviews" class="reviews-section">
+        <div class="container">
+            <h2>Customer Reviews & Comments</h2>
+            <p class="section-subtitle">Share your experience and see what others think!</p>
+
+            <div class="reviews-container">
+                <!-- Review Form -->
+                <div class="review-form-container">
+                    <h3>Leave Your Review</h3>
+                    <form id="reviewForm" class="review-form">
+                        <div class="form-group">
+                            <label for="reviewer-name">Your Name</label>
+                            <input type="text" id="reviewer-name" placeholder="Enter your name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="reviewer-email">Email</label>
+                            <input type="email" id="reviewer-email" placeholder="Enter your email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="review-rating">Rating</label>
+                            <div class="star-rating">
+                                <input type="radio" name="rating" value="5" id="star5">
+                                <label for="star5">⭐</label>
+                                <input type="radio" name="rating" value="4" id="star4">
+                                <label for="star4">⭐</label>
+                                <input type="radio" name="rating" value="3" id="star3">
+                                <label for="star3">⭐</label>
+                                <input type="radio" name="rating" value="2" id="star2">
+                                <label for="star2">⭐</label>
+                                <input type="radio" name="rating" value="1" id="star1">
+                                <label for="star1">⭐</label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="review-comment">Your Review</label>
+                            <textarea id="review-comment" placeholder="Share your thoughts about our products..." rows="5" required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-submit">Submit Review</button>
+                    </form>
+                </div>
+
+                <!-- Reviews Display -->
+                <div class="reviews-display">
+                    <h3>Recent Reviews</h3>
+                    <div id="reviewsList" class="reviews-list">
+                        <!-- Reviews will be displayed here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Leaves. All rights reserved.</p>
+    </footer>
+
+    <script src="cart.js"></script>
+    <script src="orders.js"></script>
+    <script src="reviews.js"></script>
+    <script src="featured.js"></script>
+    <script src="search.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
